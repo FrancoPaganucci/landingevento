@@ -1,0 +1,291 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+}
+
+body {
+  position: relative;
+}
+
+/* defino mixin */
+/* implemento el mixin y dsp lo llamo al banner agregándole el display block para que se borre el espacio entre img y navbar */
+img {
+  height: 170px;
+  width: 100%;
+}
+
+.banner {
+  display: block;
+  height: 170px;
+  width: 100%;
+}
+
+header {
+  margin: 0;
+  position: relative;
+}
+
+nav {
+  /* position absolute para poder mover los elementos hijo en referencia al padre */
+  position: absolute;
+  width: 100vw;
+  background-color: black;
+  padding: 0;
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  width: 10%;
+  height: 100%;
+  padding: 10px 2px;
+  text-align: center;
+  /* como resolver esto?? si se mueve el viewport se sale el a por fuera de su li */
+  overflow: hidden;
+  /* solucion */
+  margin: 0 7.5vw;
+  background-color: #00009c;
+}
+
+nav ul li a {
+  margin: 0 auto;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background-color: #d3d374;
+}
+
+.evento {
+  position: absolute;
+  background-color: #6c6cdb;
+  margin: 3em 5em;
+  width: 50vw;
+  top: 15em;
+  padding: 3em 5em;
+  float: left;
+}
+
+.evento h1 {
+  position: relative;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.evento p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  text-align: justify;
+  padding-bottom: 2em;
+}
+
+#sideform {
+  position: absolute;
+  left: 65%;
+  width: 50vw;
+  float: right;
+}
+
+#sideform .registration_form {
+  position: relative;
+  width: 25vw;
+  margin-right: 15vw;
+  top: 8em;
+  border: 1px black solid;
+  background-color: black;
+}
+
+#sideform .registration_form h2 {
+  position: relative;
+  top: 1em;
+  left: 1.5em;
+  color: white;
+}
+
+#sideform .registration_form form {
+  margin: 4.5em 3em 3em 2em;
+  padding: 2em;
+  width: 20vw;
+  position: relative;
+  border: solid #6c6cdb;
+  overflow: hidden;
+}
+
+#sideform .registration_form form input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4em;
+  height: 3em;
+  width: 15em;
+}
+
+#sideform .registration_form form .btn-enviar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 3em;
+  width: 10em;
+  left: 6em;
+}
+
+#sideform .registration_form form button {
+  width: 10em;
+  background: linear-gradient(102deg, #4b42c5 35%, #aa54cc);
+  color: #ffffff;
+  font-size: 0.8em;
+  border-radius: 0.100rem;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite;
+}
+
+#sideform .registration_form form button:hover {
+  background: linear-gradient(102deg, #aa54cc 35%, #4b42c5);
+  cursor: pointer;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+  100% {
+    -webkit-transform: scale(0.99);
+            transform: scale(0.99);
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* oradores */
+.orador {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3em;
+  background-color: black;
+  color: white;
+  padding: 25px;
+  height: 10em;
+  width: auto;
+}
+
+.orador img {
+  position: relative;
+  height: 6em;
+  width: 6em;
+  left: 1em;
+  top: 0.4em;
+  border-radius: 50%;
+}
+
+.orador aside {
+  position: relative;
+  left: 9em;
+  font-size: 15px;
+}
+
+.orador .redes {
+  display: inline-block;
+  height: 4em;
+  width: 15em;
+}
+
+.orador .redes .logo_img {
+  position: relative;
+  height: 2.4em;
+  width: 2.4em;
+  margin-right: 1em;
+  margin-top: 1.3em;
+  border-radius: 100%;
+}
+
+/* mapa */
+.mapa {
+  position: relative;
+  margin-bottom: 3em;
+  top: 3em;
+  height: 400px;
+  width: 500px;
+  background-color: #292626;
+  overflow: hidden;
+}
+
+.mapa .img_mapa {
+  position: relative;
+  height: 35em;
+  bottom: 3em;
+}
+
+/* empresas sponsors */
+.contenedor_sp {
+  position: relative;
+  margin: 1em;
+  /* imágenes logo empresas */
+}
+
+.contenedor_sp .empresas {
+  display: inline;
+  height: 2em;
+  width: 2em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-left: 3.1em;
+}
+
+.contenedor_sp .logo_empresa {
+  position: relative;
+  height: 6em;
+  width: 6em;
+  margin-right: 3em;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
